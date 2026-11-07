@@ -1,0 +1,10 @@
+[27/10/26 14:00] Joko Susilo: Selamat siang, rapat logistik dimulai. Agenda: koordinasi pengiriman ke wilayah WITA dan WIT.
+[27/10/26 14:03] Maya Sari: Pak Joko, untuk pengiriman ke Makassar butuh konfirmasi dari gudang Balikpapan.
+[27/10/26 14:05] Eko Wijaya: Saya dari Balikpapan, akan koordinasi dengan gudang untuk jadwal pengiriman ke Makassar.
+[27/10/26 14:08] Joko Susilo: Eko, tolong kirim email konfirmasi jadwal ke Maya di Medan besok pagi.
+[27/10/26 14:10] Eko Wijaya: Baik Pak, akan saya kirim email besok pagi jam 08:00 WITA.
+[27/10/26 14:12] Anton Gunawan: Untuk pengiriman ke Jayapura, butuh koordinasi dengan Nur di Finance untuk pembayaran.
+[27/10/26 14:15] Nur Hidayah: Saya akan proses pembayaran hari ini dan kirim konfirmasi via WhatsApp ke Anton.
+[27/10/26 14:18] Joko Susilo: Bagus. Anton, pastikan pengiriman ke Jayapura tidak jatuh di hari libur. Cek tanggal pengiriman ya.
+[27/10/26 14:20] Anton Gunawan: Siap, akan saya cek jadwal pengiriman dan pastikan tidak di hari Sabtu/Minggu atau libur.
+[27/10/26 14:25] Joko Susilo: Rapat selesai. Maya, tolong catat notulen dan susun task list untuk semua action items.

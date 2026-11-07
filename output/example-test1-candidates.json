@@ -1,0 +1,45 @@
+{
+  "input": "input/example-test1-budi-jumat.txt",
+  "title": "Rapat koordinasi mingguan (Example Test 1)",
+  "participants": ["Sari Wijaya", "Dewi Lestari"],
+  "candidates": [
+    {
+      "id": "c1",
+      "title": "Kirim notulen rapat ke Pak Budi",
+      "owner": "Pak Budi",
+      "dueDate": "2026-11-03",
+      "commitmentStatus": "accepted",
+      "evidenceQuote": "Tolong kirim notulen ke Pak Budi ya",
+      "sourceSegmentId": "seg-03",
+      "actionType": "email",
+      "recipients": ["Pak Budi"],
+      "isExternal": false,
+      "recipientCount": 1
+    },
+    {
+      "id": "c2",
+      "title": "Jadwalkan follow-up meeting Jumat siang",
+      "owner": "Pak Budi",
+      "dueDate": "2026-11-06",
+      "commitmentStatus": "accepted",
+      "evidenceQuote": "terus jadwalin follow-up Jumat siang",
+      "sourceSegmentId": "seg-03",
+      "actionType": "calendar",
+      "recipients": ["Pak Budi"],
+      "isExternal": false,
+      "recipientCount": 1
+    },
+    {
+      "id": "c3",
+      "title": "Pertimbangkan mengundang tim Finance ke follow-up",
+      "owner": "Sari Wijaya",
+      "commitmentStatus": "suggestion",
+      "evidenceQuote": "Mungkin sebaiknya kita undang juga tim Finance, nanti dipikirkan lagi.",
+      "sourceSegmentId": "seg-05",
+      "actionType": "task",
+      "recipients": [],
+      "isExternal": false,
+      "recipientCount": 0
+    }
+  ]
+}

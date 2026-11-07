@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: aim-note-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: aimnote
+      POSTGRES_PASSWORD: aimnote_dev_2026
+      POSTGRES_DB: aim_meeting_note
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U aimnote -d aim_meeting_note']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:

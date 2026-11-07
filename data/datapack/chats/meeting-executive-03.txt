@@ -1,0 +1,11 @@
+[27/10/26 10:00] Pak Hendra: Rapat eksekutif dimulai. Agenda: review kinerja Q3 dan rencana Q4.
+[27/10/26 10:03] Budi Santoso: Direktur, performa Q3 Operations sudah mencapai target 95%. Untuk Q4 fokus pada efisiensi logistik.
+[27/10/26 10:05] Pak Hendra: Bagus. Budi, tolong buat task untuk tim Operations fokus efisiensi logistik Q4.
+[27/10/26 10:08] Budi Santoso: Baik, akan saya susun task list untuk tim dan assign ke Agus di Makassar dan Dewi di Bandung.
+[27/10/26 10:10] Sari Wijaya: Saya akan kirim notulen rapat dan task list ke semua manajer setelah rapat.
+[27/10/26 10:12] Pak Hendra: Sari, untuk follow-up eksekutif jadwalkan Jumat pagi jam 08:00 WIB. Pastikan tidak bentrok dengan salat Jumat.
+[27/10/26 10:15] Sari Wijaya: Siap, akan buat undangan kalender untuk follow-up Jumat pagi jam 08:00 WIB.
+[27/10/26 10:18] Anton Gunawan: Direktur, untuk laporan logistik Q3 sudah siap. Saya kirim email besok.
+[27/10/26 10:20] Pak Hendra: Anton, kirim email laporan ke saya dan Budi besok sore. Jangan lupa cc Sari.
+[27/10/26 10:22] Joko Susilo: Untuk koordinasi pengiriman Q4, saya akan buat jadwal dan koordinasi dengan Eko di Balikpapan.
+[27/10/26 10:25] Pak Hendra: Bagus. Rapat selesai. Sari, susun action items dan kirim ke semua peserta hari ini juga.

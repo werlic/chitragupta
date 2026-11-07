@@ -1,0 +1,3 @@
+# Rencana hasil `npm run b1 -- plan` (berisi ID meeting lokal); contoh kandidat tetap di-commit
+*.json
+!example-test1-candidates.json

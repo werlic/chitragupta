@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme "Lontar" — docs/design/README.md (source: docs/design/r1-canvas/DesignSystem.dc.html).
+   Status colors keep one meaning everywhere: info = waiting for approval, clarify = question,
+   warning = rule warning / undo, destructive = injection / danger, success = done. */
+@layer base {
+  :root {
+    --background: 36 33% 97%;
+    --foreground: 36 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 36 10% 10%;
+    --primary: 238 51% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 38 24% 93%;
+    --secondary-foreground: 36 10% 10%;
+    --muted: 38 24% 93%;
+    --muted-foreground: 36 8% 39%;
+    --accent: 240 65% 95%;
+    --accent-foreground: 238 51% 35%;
+    --destructive: 0 74% 42%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-soft: 0 93% 94%;
+    --success: 142 72% 29%;
+    --success-foreground: 0 0% 100%;
+    --success-soft: 141 84% 93%;
+    --warning: 26 90% 37%;
+    --warning-foreground: 0 0% 100%;
+    --warning-soft: 48 96% 89%;
+    --info: 201 96% 32%;
+    --info-foreground: 0 0% 100%;
+    --info-soft: 204 94% 94%;
+    --clarify: 295 72% 40%;
+    --clarify-foreground: 0 0% 100%;
+    --clarify-soft: 287 100% 95%;
+    --border: 37 19% 87%;
+    --input: 38 17% 82%;
+    --ring: 238 51% 47%;
+    --radius: 0.625rem;
+  }
+
+  .dark {
+    --background: 40 8% 8%;
+    --foreground: 38 24% 93%;
+    --card: 36 9% 11%;
+    --card-foreground: 38 24% 93%;
+    --primary: 237 77% 74%;
+    --primary-foreground: 240 30% 12%;
+    --secondary: 40 9% 14%;
+    --secondary-foreground: 38 24% 93%;
+    --muted: 40 9% 14%;
+    --muted-foreground: 38 8% 61%;
+    --accent: 238 33% 22%;
+    --accent-foreground: 38 24% 93%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-soft: 0 45% 18%;
+    --success: 142 60% 55%;
+    --success-foreground: 142 60% 10%;
+    --success-soft: 142 40% 15%;
+    --warning: 38 90% 60%;
+    --warning-foreground: 38 90% 10%;
+    --warning-soft: 38 50% 15%;
+    --info: 199 89% 64%;
+    --info-foreground: 199 89% 10%;
+    --info-soft: 201 50% 16%;
+    --clarify: 292 80% 74%;
+    --clarify-foreground: 292 80% 12%;
+    --clarify-soft: 295 35% 18%;
+    --border: 38 8% 20%;
+    --input: 38 8% 26%;
+    --ring: 237 77% 74%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}

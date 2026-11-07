@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "contacts": [
+    { "id": "c001", "name": "Budi Santoso", "role": "Manager", "timezone": "WIB", "location": "Jakarta", "email": "budi.santoso@company.id", "phone": "+62-812-1234-5678", "department": "Operations" },
+    { "id": "c002", "name": "Budi Hartono", "role": "Staff", "timezone": "WITA", "location": "Denpasar", "email": "budi.hartono@company.id", "phone": "+62-813-1234-5678", "department": "Finance" },
+    { "id": "c003", "name": "Sari Wijaya", "role": "Secretary", "timezone": "WIB", "location": "Jakarta", "email": "sari.wijaya@company.id", "phone": "+62-811-1234-5678", "department": "General Affairs" },
+    { "id": "c004", "name": "Pak Hendra", "role": "Director", "timezone": "WIT", "location": "Jayapura", "email": "hendra@company.id", "phone": "+62-814-1234-5678", "department": "Executive" }
+  ],
+  "externalContacts": [
+    { "id": "e001", "name": "Vendor PT Maju", "email": "contact@ptmaju.co.id", "isExternal": true }
+  ]
+}

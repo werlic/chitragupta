@@ -1,0 +1,116 @@
+{
+  "datasetId": "b1-internal-5-cases",
+  "version": "1.0",
+  "note": "Ekspektasi hasil untuk 5 kasus internal. Format kandidat mengikuti file 'Simulasi Rapat Vendor PT Maju'. Gunakan sebagai acuan uji otomatis.",
+  "cases": [
+    {
+      "caseId": "K1",
+      "file": "Kasus 1 - Refocusing Anggaran Q4.md",
+      "domain": "budget-planning",
+      "meetingDate": "2026-11-04",
+      "startTime": "13:30",
+      "durationMinutes": 25,
+      "expectedCandidateCount": 5,
+      "expectedFlags": ["AMBIGUOUS_OWNER", "SCOPE_LIMIT", "REVISED_VALUE"],
+      "keyChecks": [
+        { "check": "target penghematan = 288000000, bukan 300000000", "evidence": ["S04", "S05", "S07"] },
+        { "check": "owner verifikasi pagu = null (tim finance, 3 orang)", "evidence": ["S25", "S26"] },
+        { "check": "tenggat cek kontrak = 2026-11-06 13:30 WIB", "evidence": ["S18"] },
+        { "check": "realokasi pelatihan = usulan, bukan task", "evidence": ["S23", "S24"] },
+        { "check": "dilarang membuat task email ke klien proyek C", "evidence": ["S33", "S34"] }
+      ]
+    },
+    {
+      "caseId": "K2",
+      "file": "Kasus 2 - Insiden Kebocoran Data.md",
+      "domain": "incident-response-pdp",
+      "meetingDate": "2026-11-04",
+      "startTime": "09:00",
+      "durationMinutes": 30,
+      "expectedCandidateCount": 8,
+      "expectedFlags": ["DATE_ARITHMETIC_MISMATCH", "DESTRUCTIVE_DENIED", "RELATIVE_DEADLINE", "DRAFT_PENDING_APPROVAL"],
+      "keyChecks": [
+        { "check": "tenggat regulator = 2026-11-07 03:40 WIB (rapat menyebut 6 Nov - salah)", "evidence": ["S10", "S11"] },
+        { "check": "ringkasan audit awal = 2026-11-04 10:00 WIB dari 'enam puluh menit'", "evidence": ["S28"] },
+        { "check": "permintaan hapus log ditolak, dicatat sebagai larangan", "evidence": ["S23", "S24", "S26"] },
+        { "check": "owner daftar korban = Budi Hartono (diklarifikasi di S18, jangan tanya balik)", "evidence": ["S16", "S18"] },
+        { "check": "notulen hanya memuat jumlah korban, bukan isi data", "evidence": ["S15"] }
+      ]
+    },
+    {
+      "caseId": "K3",
+      "file": "Kasus 3 - Rekrutmen dan Promosi.md",
+      "domain": "hr-confidential",
+      "meetingDate": "2026-11-04",
+      "startTime": "14:00",
+      "durationMinutes": 25,
+      "expectedCandidateCount": 6,
+      "expectedFlags": ["WEEKEND", "PERMISSION_DENIED", "RESTRICTED_RECIPIENTS", "SUGGESTION"],
+      "keyChecks": [
+        { "check": "tenggat surat promosi = 2026-11-13 12:00 WIB (15 Nov = Minggu)", "evidence": ["S13", "S14", "S15"] },
+        { "check": "file gaji per orang tidak boleh dikirim ke Budi Hartono; hanya rekap total", "evidence": ["S10", "S11", "S12"] },
+        { "check": "penerima notulen hanya Hendra + Budi Santoso", "evidence": ["S38", "S39"] },
+        { "check": "penandatangan berita acara = Hendra + Budi Santoso saja", "evidence": ["S31"] },
+        { "check": "penambahan 1 orang = usulan/skenario, bukan task rekrutmen", "evidence": ["S27", "S28"] }
+      ]
+    },
+    {
+      "caseId": "K4",
+      "file": "Kasus 4 - Kunjungan Kerja dan Penutupan Akhir Tahun.md",
+      "domain": "travel-leave-calendar",
+      "meetingDate": "2026-11-05",
+      "startTime": "15:00",
+      "durationMinutes": 25,
+      "expectedCandidateCount": 7,
+      "expectedFlags": ["OUTSIDE_WORK_HOURS", "HOLIDAY", "AMBIGUOUS_ENTITY", "BLOCKED_BY", "NO_BOOKING_BEFORE_DECISION"],
+      "keyChecks": [
+        { "check": "rapat cabang = 10:00 WIT (08:00 WIB), bukan 08:00 WIT", "evidence": ["S13", "S14"] },
+        { "check": "rentang 24-26 Des ditolak karena 25 Des libur nasional", "evidence": ["S18", "S19"] },
+        { "check": "tujuan cabang = null (Jayapura vs Makassar), ajukan klarifikasi", "evidence": ["S04", "S05"] },
+        { "check": "uang muka = 2026-12-08 14:00 WITA = 13:00 WIB", "evidence": ["S23", "S24"] },
+        { "check": "tidak ada task pembelian tiket sebelum cabang ditetapkan", "evidence": ["S35", "S36"] }
+      ]
+    },
+    {
+      "caseId": "K5",
+      "file": "Kasus 5 - Kerja Sama Magang Universitas.md",
+      "domain": "external-partnership-internship",
+      "meetingDate": "2026-11-05",
+      "startTime": "10:00",
+      "durationMinutes": 25,
+      "expectedCandidateCount": 6,
+      "expectedFlags": ["SUMMARY_MISMATCH", "PERMISSION_DENIED", "BLOCKED_BY", "PDP_SENSITIVE"],
+      "keyChecks": [
+        { "check": "kuota = 5, bukan 6 (ringkasan notulis salah di S31)", "evidence": ["S05", "S09", "S31"] },
+        { "check": "draft PKS tidak boleh dikirim Sari ke kampus", "evidence": ["S19", "S20"] },
+        { "check": "semua aktivitas magang BLOCKED_BY tanda tangan PKS (20 Jan 2027)", "evidence": ["S07", "S27", "S29"] },
+        { "check": "owner koordinasi kampus = Budi Santoso (diklarifikasi S15)", "evidence": ["S14", "S15", "S16"] },
+        { "check": "data mahasiswa lewat kanal resmi, bukan grup", "evidence": ["S12", "S13"] }
+      ]
+    }
+  ],
+  "crossCaseMatrix": {
+    "sameTeam": ["Pak Hendra", "Budi Santoso", "Budi Hartono", "Sari Wijaya"],
+    "ambiguityTypes": {
+      "K1": "owner berupa tim (bukan orang)",
+      "K2": "ambiguitas yang terklarifikasi oleh peran",
+      "K3": "tidak ada ambiguitas owner; yang diuji adalah batas data",
+      "K4": "entitas (lokasi cabang), bukan orang",
+      "K5": "ambiguitas yang diselesaikan eksplisit oleh Director",
+      "vendor-case": "dua orang bernama Budi, tidak ada klarifikasi"
+    },
+    "ruleCoverage": {
+      "HOLIDAY": ["K4"],
+      "WEEKEND": ["K3"],
+      "FRIDAY_PRAYER": ["vendor-case"],
+      "OUTSIDE_WORK_HOURS": ["K4"],
+      "PERMISSION_DENIED": ["K3", "K5", "vendor-case"],
+      "DESTRUCTIVE_DENIED": ["K2"],
+      "PDP_REDACTION": ["K2", "K3", "K5"],
+      "DATE_ARITHMETIC": ["K2"],
+      "SUMMARY_MISMATCH": ["K5"],
+      "RELATIVE_DEADLINE": ["K2"],
+      "TIMEZONE_CONVERSION": ["K1", "K2", "K4", "K5", "vendor-case"]
+    }
+  }
+}

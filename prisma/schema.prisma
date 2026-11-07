@@ -1,0 +1,274 @@
+// Prisma schema for Chitragupta
+// Database: PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============ AUTH & RBAC ============
+
+enum Role {
+  ADMIN
+  DIRECTOR
+  MANAGER
+  SECRETARY
+  STAFF
+}
+
+model User {
+  id          String    @id @default(cuid())
+  email       String    @unique
+  password    String // bcrypt hash
+  name        String
+  role        Role      @default(STAFF)
+  avatar      String?   // URL or initials-based
+  timezone    String    @default("WIB")
+  location    String?
+  department  String?
+  phone       String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  // Relations
+  meetingsCreated   Meeting[]      @relation("MeetingCreator")
+  assignedCandidates ActionCandidate[]
+  contacts          Contact[]
+  chatMessages       ChatMessage[]
+  channelMembers     ChannelMember[]
+  auditLogs         AuditLog[]
+  executionRecords  ExecutionRecord[]
+
+  @@index([email])
+  @@index([role])
+}
+
+model Contact {
+  id          String    @id @default(cuid())
+  name        String
+  role        String?   // job role, e.g. "Manager"
+  email       String?
+  phone       String?
+  timezone    String    @default("WIB")
+  location    String?
+  department  String?
+  isExternal  Boolean   @default(false)
+  userId      String?   @unique // link to User if internal
+  user        User?     @relation(fields: [userId], references: [id])
+  createdAt   DateTime  @default(now())
+
+  @@index([name])
+  @@index([isExternal])
+}
+
+// ============ INDONESIA RULES DATA ============
+
+model Holiday {
+  id            String    @id @default(cuid())
+  date          String    @unique // ISO date "2026-12-25"
+  name          String
+  type          String    // "national" | "joint_leave" | "event"
+  isPublicHoliday Boolean  @default(true)
+  createdAt     DateTime  @default(now())
+
+  @@index([date])
+}
+
+model WorkRule {
+  id            String    @id @default(cuid())
+  key           String    @unique // e.g. "workHours.default.start"
+  value         String    // JSON string or simple value
+  description   String?
+  createdAt     DateTime  @default(now())
+}
+
+// ============ MEETING & AGENT ============
+
+enum MeetingStatus {
+  DRAFT
+  PROCESSING
+  READY      // candidates generated, awaiting approval
+  EXECUTED   // approve and execute happen in one call (POST /api/agent/approve)
+  REJECTED
+}
+
+enum CandidateStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  EDITED
+  EXECUTED
+}
+
+enum CommitmentStatus {
+  ACCEPTED
+  SUGGESTION
+  VAGUE
+  QUESTION
+}
+
+enum ActionType {
+  EMAIL
+  CALENDAR
+  TASK
+  WHATSAPP
+}
+
+model Meeting {
+  id            String         @id @default(cuid())
+  title         String         @default("Untitled Meeting")
+  rawText       String         @db.Text // original input text
+  status        MeetingStatus  @default(DRAFT)
+  creatorId     String
+  creator       User           @relation("MeetingCreator", fields: [creatorId], references: [id])
+  participants  String[]       @default([]) // array of contact IDs
+  notulen       Json?          // generated notulen (Indonesia format)
+  clarifierQuestions Json?    // structured clarifier questions (ClarifierQuestion[])
+  clarifierAnswers   Json?    // user answers to clarifier questions
+  planHash      String?        // SHA256 of approved plan
+  approvalToken String?        // HMAC token
+  retentionUntil DateTime?     // now + 5 years (UU PDP)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  candidates    ActionCandidate[]
+  auditLogs     AuditLog[]
+
+  @@index([creatorId])
+  @@index([status])
+}
+
+model ActionCandidate {
+  id                String            @id @default(cuid())
+  meetingId         String
+  meeting           Meeting           @relation(fields: [meetingId], references: [id], onDelete: Cascade)
+  candidateId       String            // "cand-01" from parser
+  title             String
+  owner             String            // contact name
+  ownerId           String?           // contact ID if resolved
+  dueDate           String?
+  dueTime           String?
+  location          String?
+  commitmentStatus  CommitmentStatus  @default(ACCEPTED)
+  evidenceQuote     String
+  sourceSegmentId   String
+  actionType        ActionType
+  recipients        String[]           @default([])
+  isExternal        Boolean           @default(false)
+  recipientCount    Int              @default(0)
+  status            CandidateStatus  @default(PENDING)
+  ruleWarnings      Json?            // array of rule issues
+  validatorResult   Json?            // { matches, mismatches, warnings }
+  adjustedDueDate   String?
+  adjustedTime      String?
+  assigneeId        String?          // User ID if assigned
+  assignee          User?            @relation(fields: [assigneeId], references: [id])
+  createdAt         DateTime         @default(now())
+  updatedAt         DateTime         @updatedAt
+
+  executionRecords  ExecutionRecord[]
+
+  @@index([meetingId])
+  @@index([status])
+  @@index([assigneeId])
+}
+
+model ExecutionRecord {
+  id            String     @id @default(cuid())
+  candidateId  String
+  candidate    ActionCandidate @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+  userId       String?    // who triggered execution
+  user         User?      @relation(fields: [userId], references: [id])
+  tool         String    // "email" | "calendar" | "task" | "whatsapp"
+  mockOutput   Json      // what was "sent"
+  status       String    @default("SUCCESS") // SUCCESS | FAILED | UNDONE
+  executedAt   DateTime  @default(now())
+
+  @@index([candidateId])
+  @@index([userId])
+}
+
+model IdempotencyKey {
+  id            String   @id @default(cuid())
+  key           String   @unique // meetingId + candidateId + actionType
+  meetingId     String
+  candidateId   String
+  actionType    String
+  executionId   String?  // link to ExecutionRecord if executed
+  createdAt     DateTime @default(now())
+
+  @@index([key])
+}
+
+// ============ AUDIT LOG ============
+
+model AuditLog {
+  id          String   @id @default(cuid())
+  meetingId   String?
+  meeting     Meeting? @relation(fields: [meetingId], references: [id])
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id])
+  type        String   // event type: INPUT_RECEIVED, CONSENT_LOGGED, etc.
+  payload     Json     // full event data
+  createdAt   DateTime @default(now())
+
+  @@index([meetingId])
+  @@index([userId])
+  @@index([type])
+}
+
+// ============ CHAT ============
+
+enum ChannelType {
+  GROUP
+  DM
+  AI
+}
+
+model ChatChannel {
+  id          String      @id @default(cuid())
+  name        String
+  type        ChannelType @default(GROUP)
+  description String?
+  members     ChannelMember[]
+  messages    ChatMessage[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([type])
+}
+
+model ChannelMember {
+  id          String      @id @default(cuid())
+  channelId   String
+  channel     ChatChannel @relation(fields: [channelId], references: [id], onDelete: Cascade)
+  userId      String
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  joinedAt    DateTime    @default(now())
+
+  @@unique([channelId, userId])
+  @@index([channelId])
+  @@index([userId])
+}
+
+model ChatMessage {
+  id          String      @id @default(cuid())
+  channelId   String
+  channel     ChatChannel @relation(fields: [channelId], references: [id], onDelete: Cascade)
+  userId      String?     // null for AI bot
+  user        User?       @relation(fields: [userId], references: [id])
+  senderName  String      // "Budi Santoso" or "AI Assistant"
+  senderRole  String?     // for badge display
+  content     String      @db.Text
+  isAI        Boolean     @default(false)
+  meta        Json?       // AI chat: { plans: PlanCard[] } snapshot shown with this message
+  meetingId   String?     // AI chat: meeting of the plan card in this message (no FK: deleting a session keeps the meeting)
+  createdAt   DateTime    @default(now())
+
+  @@index([channelId, createdAt])
+  @@index([channelId, meetingId])
+}

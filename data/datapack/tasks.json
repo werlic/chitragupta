@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "description": "Contoh task untuk seed database — menunjukkan struktur task yang dibuat dari meeting",
+  "tasks": [
+    {
+      "id": "t001",
+      "title": "Kirim email konfirmasi rapat operasional",
+      "owner": "Budi Santoso",
+      "ownerId": "c001",
+      "dueDate": "2026-11-03",
+      "dueTime": "09:00",
+      "location": "Jakarta",
+      "actionType": "email",
+      "commitmentStatus": "accepted",
+      "evidenceQuote": "Budi akan kirim email konfirmasi ke semua peserta",
+      "sourceSegmentId": "seg-01",
+      "isExternal": false,
+      "recipients": ["c003", "c005", "c008"],
+      "recipientCount": 3
+    },
+    {
+      "id": "t002",
+      "title": "Buat undangan kalender follow-up Jumat siang",
+      "owner": "Sari Wijaya",
+      "ownerId": "c003",
+      "dueDate": "2026-11-06",
+      "dueTime": "13:00",
+      "location": "Jakarta",
+      "actionType": "calendar",
+      "commitmentStatus": "accepted",
+      "evidenceQuote": "Sari akan buat undangan kalender untuk follow-up Jumat siang",
+      "sourceSegmentId": "seg-02",
+      "isExternal": false,
+      "recipients": ["c001", "c002", "c004"],
+      "recipientCount": 3
+    },
+    {
+      "id": "t003",
+      "title": "Hubungi vendor PT Maju untuk penawaran",
+      "owner": "Agus Prasetyo",
+      "ownerId": "c006",
+      "dueDate": "2026-11-04",
+      "dueTime": "10:00",
+      "location": "Makassar",
+      "actionType": "whatsapp",
+      "commitmentStatus": "accepted",
+      "evidenceQuote": "Agus akan hubungi vendor PT Maju via WhatsApp",
+      "sourceSegmentId": "seg-03",
+      "isExternal": true,
+      "recipients": ["e001"],
+      "recipientCount": 1
+    }
+  ]
+}

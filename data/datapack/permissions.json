@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "description": "Tabel permission: siapa (role) boleh menghubungi siapa, dan tool apa yang boleh dipakai",
+  "permissions": [
+    {
+      "role": "ADMIN",
+      "canContactRoles": ["ADMIN", "DIRECTOR", "MANAGER", "SECRETARY", "STAFF", "EXTERNAL"],
+      "allowedTools": ["email", "calendar", "task", "whatsapp"]
+    },
+    {
+      "role": "DIRECTOR",
+      "canContactRoles": ["ADMIN", "DIRECTOR", "MANAGER", "SECRETARY", "STAFF", "EXTERNAL"],
+      "allowedTools": ["email", "calendar", "task", "whatsapp"]
+    },
+    {
+      "role": "MANAGER",
+      "canContactRoles": ["ADMIN", "MANAGER", "SECRETARY", "STAFF", "EXTERNAL"],
+      "allowedTools": ["email", "calendar", "task", "whatsapp"]
+    },
+    {
+      "role": "SECRETARY",
+      "canContactRoles": ["ADMIN", "MANAGER", "SECRETARY", "STAFF", "EXTERNAL"],
+      "allowedTools": ["email", "calendar", "task", "whatsapp"]
+    },
+    {
+      "role": "STAFF",
+      "canContactRoles": ["STAFF", "EXTERNAL"],
+      "allowedTools": ["email", "task"]
+    }
+  ],
+  "contactRules": [
+    { "contactId": "c001", "canBeContactedBy": ["ADMIN", "DIRECTOR", "MANAGER", "SECRETARY"], "allowedTools": ["email", "calendar", "task", "whatsapp"] },
+    { "contactId": "c002", "canBeContactedBy": ["ADMIN", "DIRECTOR", "MANAGER", "SECRETARY", "STAFF"], "allowedTools": ["email", "calendar", "task"] },
+    { "contactId": "e001", "canBeContactedBy": ["ADMIN", "DIRECTOR", "MANAGER"], "allowedTools": ["email", "whatsapp"] },
+    { "contactId": "e002", "canBeContactedBy": ["ADMIN", "MANAGER", "SECRETARY"], "allowedTools": ["email"] },
+    { "contactId": "e003", "canBeContactedBy": ["ADMIN", "MANAGER"], "allowedTools": ["email", "whatsapp"] }
+  ]
+}

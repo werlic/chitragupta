@@ -1,0 +1,25 @@
+{
+  "version": "2026-2027",
+  "source": "SKB 3 Menteri Setneg + SKB 2026",
+  "holidays": [
+    { "date": "2026-12-25", "name": "Hari Raya Natal", "type": "national", "isPublicHoliday": true },
+    { "date": "2026-12-26", "name": "Cuti Bersama Natal", "type": "joint_leave", "isPublicHoliday": true },
+    { "date": "2027-01-01", "name": "Tahun Baru Masehi", "type": "national", "isPublicHoliday": true },
+    { "date": "2027-02-15", "name": "Tahun Baru Imlek", "type": "national", "isPublicHoliday": true },
+    { "date": "2027-03-11", "name": "Isra Mikraj Nabi Muhammad SAW", "type": "national", "isPublicHoliday": true },
+    { "date": "2027-03-12", "name": "Hari Suci Nyepi", "type": "national", "isPublicHoliday": true },
+    { "date": "2027-04-09", "name": "Wafat Isa Almasih", "type": "national", "isPublicHoliday": true },
+    { "date": "2027-04-10", "name": "Cuti Bersama Wafat Isa Almasih", "type": "joint_leave", "isPublicHoliday": true },
+    { "date": "2027-05-01", "name": "Hari Buruh Internasional", "type": "national", "isPublicHoliday": true },
+    { "date": "2027-05-13", "name": "Hari Raya Eidulfitri 1448 H", "type": "national", "isPublicHoliday": true },
+    { "date": "2027-05-14", "name": "Cuti Bersama Eidulfitri", "type": "joint_leave", "isPublicHoliday": true },
+    { "date": "2027-05-15", "name": "Cuti Bersama Eidulfitri", "type": "joint_leave", "isPublicHoliday": true },
+    { "date": "2027-05-16", "name": "Cuti Bersama Eidulfitri", "type": "joint_leave", "isPublicHoliday": true },
+    { "date": "2027-06-01", "name": "Hari Lahir Pancasila", "type": "national", "isPublicHoliday": true },
+    { "date": "2027-06-20", "name": "Hari Raya Eiduladha 1448 H", "type": "national", "isPublicHoliday": true },
+    { "date": "2027-07-07", "name": "Tahun Baru Hijriyah 1449 H", "type": "national", "isPublicHoliday": true },
+    { "date": "2027-08-17", "name": "Hari Kemerdekaan RI", "type": "national", "isPublicHoliday": true },
+    { "date": "2027-09-04", "name": "Maulid Nabi Muhammad SAW", "type": "national", "isPublicHoliday": true },
+    { "date": "2027-12-25", "name": "Hari Raya Natal", "type": "national", "isPublicHoliday": true }
+  ]
+}

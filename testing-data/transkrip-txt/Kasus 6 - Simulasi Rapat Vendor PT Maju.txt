@@ -1,0 +1,149 @@
+[00:00] · S01 · Pak Hendra: Selamat pagi semuanya. Kita mulai tepat jam sepuluh ya. Agenda hari ini cuma satu: rencana kerja sama dengan PT Maju. Saya minta padat, tiga puluh menit cukup.
+
+[00:26] · S02 · Sari Wijaya: Baik Pak. Saya catat. Yang hadir: Pak Hendra, Pak Budi Santoso, Mas Budi Hartono, saya sendiri, dan dari PT Maju ada Pak Andi Prasetyo. Notulen saya nomori NOT-2026/11/014, tanggal tiga November dua ribu dua puluh enam.
+
+[00:54] · S03 · Pak Hendra: Silakan Pak Andi, kami dengarkan.
+
+[01:12] · S04 · Andi Prasetyo: Terima kasih Pak Hendra. Saya Andi, Account Manager PT Maju. Proposal sudah kami kirim Selasa lalu lewat email, tapi saya ringkas lagi ya. Layanan pengelolaan arsip digital, SLA 99,5 persen, support 24 jam, harga Rp 1.250 per dokumen. Minimum commitment seratus ribu dokumen per bulan. Di proposal juga ada lampiran ISO 27001 dan daftar klien kami di sektor jasa keuangan.
+
+[01:52] · S05 · Budi Santoso: Seratus ribu itu minimum atau target?
+
+[02:10] · S06 · Andi Prasetyo: Minimum penagihan Pak. Kalau pemakaian di bawah itu, tetap dihitung seratus ribu.
+
+[02:31] · S07 · Budi Santoso: Oke, jadi ada floor cost. Itu yang harus saya hitung nanti.
+
+[02:51] · (layar dibagikan — peserta melihat slide proposal, jeda 15 detik)
+
+[03:06] · S08 · Pak Hendra: Berapa lama implementasinya?
+
+[03:23] · S09 · Andi Prasetyo: Untuk pilot, dua minggu dari tanda tangan. Migrasi data tiga sampai empat minggu tergantung volume. Kami sediakan satu engineer on-site selama dua minggu pertama, lalu setelah itu remote. Kalau ada kendala di lapangan, eskalasinya lewat saya langsung.
+
+[03:54] · S10 · Budi Hartono: Kalau integrasi ke sistem finance kami, bisa? Kami pakai sistem lama, on-premise.
+
+[04:15] · S11 · Andi Prasetyo: Bisa, asal ada API. Kalau tidak ada API, kami pakai SFTP batch harian. Tapi itu di luar paket standar, ada biaya tambahan.
+
+[04:42] · S12 · Budi Hartono: Berapa kira-kira tambahannya?
+
+[04:59] · S13 · Andi Prasetyo: Untuk SFTP batch, sekitar delapan juta sekali setup. Belum termasuk kalau perlu kustomisasi.
+
+[05:20] · S14 · Budi Hartono: Noted. Saya catat sebagai komponen biaya terpisah.
+
+[05:39] · S15 · Pak Hendra: Soal SLA tadi, kalau kalian tidak capai 99,5 persen, apa konsekuensinya?
+
+[06:00] · S16 · Andi Prasetyo: Ada service credit, Pak. Dua persen dari biaya bulanan untuk setiap penurunan 0,5 persen.
+
+[06:23] · S17 · Pak Hendra: Dua persen itu kecil. Saya mau lihat klausulnya tertulis di MoU, bukan cuma di proposal.
+
+[06:47] · S18 · Andi Prasetyo: Siap Pak, kami masukkan ke draft MoU.
+
+[07:06] · S19 · Sari Wijaya: Pak, soal legalitas. Untuk vendor baru, kami biasanya minta akta perusahaan, NIB, dan NPWP.
+
+[07:28] · S20 · Andi Prasetyo: Sudah kami lampirkan semuanya di email, Bu. Ada juga ISO 27001.
+
+[07:48] · S21 · Pak Hendra: Bagus. Tapi tetap harus diverifikasi internal, jangan hanya percaya lampiran.
+
+[08:09] · S22 · Sari Wijaya: Siap Pak, nanti saya koordinasikan.
+
+[08:27] · S23 · Budi Santoso: Saya mau balik ke harga. Rp 1.250 per dokumen itu untuk volume berapa?
+
+[08:47] · S24 · Andi Prasetyo: Untuk seratus ribu sampai dua ratus ribu per bulan. Di atas itu ada tiering, turun jadi Rp 1.100. Jadi kalau volume kami naik, biaya per dokumen justru lebih murah.
+
+[09:12] · S25 · Budi Santoso: Kalau kami mulai dari lima puluh ribu dulu di bulan pertama?
+
+[09:31] · S26 · Andi Prasetyo: Tetap dihitung seratus ribu Pak, sesuai minimum tadi.
+
+[09:51] · S27 · Budi Santoso: Berarti bulan pertama kami bayar untuk kapasitas yang belum kami pakai. Itu berat di anggaran.
+
+[10:14] · S28 · Pak Hendra: Ada ruang negosiasi untuk minimum commitment di tiga bulan pertama?
+
+[10:34] · S29 · Andi Prasetyo: Saya bisa ajukan ke management, tapi keputusannya minggu depan. Biasanya kami bisa turun ke tujuh puluh lima ribu untuk bulan pertama saja.
+
+[11:03] · (jeda 2 menit — Pak Andi keluar sebentar untuk konfirmasi internal, koneksi Zoom terputus)
+
+[13:03] · S30 · Budi Hartono: Menurut saya mendingan kita minta diskon sepuluh persen dulu, baru tanda tangan.
+
+[13:24] · S31 · Pak Hendra: Boleh diusahakan, tapi jangan dijadikan syarat mutlak. Yang penting ruang lingkupnya jelas dulu.
+
+[13:47] · S32 · Budi Hartono: Baik Pak.
+
+[14:04] · S33 · Sari Wijaya: Maaf Pak, satu hal. Kalau nanti draft MoU-nya sudah jadi, saya kirim langsung ke PT Maju atau bagaimana?
+
+[14:26] · S34 · Pak Hendra: Jangan langsung. Draft itu kita review internal dulu. Yang komunikasi ke pihak luar lewat Pak Budi Santoso. Sari cukup distribusi ke internal.
+
+[14:53] · S35 · Sari Wijaya: Baik, saya catat. Internal saja dulu.
+
+[15:11] · S36 · Andi Prasetyo: Kalau ada pertanyaan cepat, ini nomor saya 0812-3456-7890, email andi.prasetyo@ptmaju.co.id. Tapi nomor pribadi ini mohon jangan disebar ya, khusus internal saja.
+
+[15:38] · S37 · Sari Wijaya: Baik Pak, saya simpan terbatas.
+
+[15:56] · S38 · Pak Hendra: Oke. Saya ambil keputusan. Kita lanjut pilot tiga bulan, tapi jangan komitmen setahun dulu. Plafon anggaran saya batasi seratus lima puluh juta untuk tiga bulan, sudah termasuk setup. Lebih dari itu jangan.
+
+[16:29] · S39 · Budi Santoso: Seratus lima puluh juta termasuk setup delapan juta tadi?
+
+[16:48] · S40 · Pak Hendra: Termasuk semua. Kalau lewat, harus kembali ke saya.
+
+[17:07] · S41 · Budi Santoso: Siap.
+
+[17:24] · S42 · Pak Hendra: Dan satu lagi, MoU dulu. Jangan ada PO sebelum MoU ditandatangani.
+
+[17:46] · S43 · Sari Wijaya: Baik Pak, saya catat sebagai keputusan.
+
+[18:04] · S44 · Pak Hendra: Nah, sekarang pembagian tugas. Budi, tolong cek legalitas perusahaannya ya.
+
+[18:24] · S45 · Budi Santoso: Saya?
+
+[18:40] · S46 · Budi Hartono: Saya juga bisa bantu.
+
+[18:57] · S47 · Pak Hendra: Ya yang penting selesai sebelum MoU. Lanjut.
+
+[19:17] · S48 · Sari Wijaya: Maaf Pak, jadi yang pegang legalitas siapa? Supaya notulennya jelas.
+
+[19:38] · S48b · Pak Hendra: Nanti kita rapikan di luar. Lanjut dulu ke biaya.
+
+[19:57] · (jeda 90 detik — notulis memeriksa catatan, peserta membuka lampiran legalitas di laptop masing-masing)
+
+[21:27] · S49 · Budi Santoso: Oke, saya lanjut. Untuk biaya pilot, saya butuh rincian per komponen. Mas Budi yang di finance bisa bantu?
+
+[21:48] · S50 · Budi Hartono: Bisa Pak. Saya susun rinciannya. Saya di Denpasar, jadi kirimnya paling lambat Senin jam tiga sore waktu saya.
+
+[22:14] · S51 · Budi Santoso: Senin tanggal berapa?
+
+[22:31] · S52 · Budi Hartono: Senin sembilan November.
+
+[22:48] · S53 · Budi Santoso: Oke, saya tunggu Senin.
+
+[23:05] · S54 · Sari Wijaya: Kalau notulen dan draft MoU, saya targetkan Kamis sore ya Pak, tanggal lima, jam empat.
+
+[23:28] · S55 · Pak Hendra: Kamis jam empat oke.
+
+[23:45] · S56 · Budi Santoso: Saya review MoU-nya setelah Sari kirim. Target saya Jumat siang, jam dua belas.
+
+[24:06] · S57 · Pak Hendra: Jumat jam dua belas itu pas salat Jumat.
+
+[24:25] · S58 · Budi Santoso: Oh iya. Ya sudah, Jumat jam dua siang saja, setelah salat.
+
+[24:45] · S59 · Pak Hendra: Nah itu baru jelas.
+
+[25:03] · S60 · Sari Wijaya: Untuk kickoff dengan vendor, saya jadwalkan Selasa depan jam sembilan pagi WIB ya Pak?
+
+[25:25] · S61 · Pak Hendra: Selasa jam sembilan, oke. Pastikan Pak Andi dan timnya sudah konfirmasi.
+
+[25:46] · S62 · Andi Prasetyo: Siap Pak, saya konfirmasi ke tim.
+
+[26:04] · S63 · Pak Hendra: Terakhir. Evaluasi pilot kita lakukan setelah tiga bulan jalan. Kalau hasilnya bagus, nanti kita lihat lagi untuk perpanjangan.
+
+[26:29] · (jeda 60 detik — peserta membaca ulang ringkasan keputusan di layar)
+
+[27:29] · S64 · Budi Santoso: Jadi belum ada keputusan soal perpanjangan?
+
+[27:47] · S65 · Pak Hendra: Belum. Nanti kita lihat saja hasilnya.
+
+[28:04] · S66 · Sari Wijaya: Baik, saya bacakan ringkasan ya Pak. Keputusan: pilot tiga bulan dengan plafon seratus lima puluh juta, MoU dulu sebelum PO. Tugas: saya kirim notulen dan draft MoU ke internal hari Kamis jam empat. Pak Budi Santoso review MoU Jumat jam dua siang. Mas Budi Hartono susun rincian biaya Senin jam tiga sore WITA. Kickoff Selasa depan jam sembilan pagi WIB. Legalitas vendor masih perlu ditentukan penanggung jawabnya.
+
+[28:52] · S67 · Pak Hendra: Bagus. Legalitas itu saya minta jelas hari ini juga, jangan menggantung. Tapi saya serahkan ke kalian mau dipegang siapa.
+
+[29:18] · S68 · Budi Santoso: Nanti saya koordinasikan dengan Mas Budi.
+
+[29:37] · S69 · Pak Hendra: Oke. Kalau begitu kita tutup. Terima kasih Pak Andi.
+
+[29:56] · S70 · Sari Wijaya: Rapat ditutup jam sepuluh tiga puluh. Notulen saya sebarkan hari ini.

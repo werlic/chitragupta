@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "description": "Contacts untuk Chitragupta (tantangan B1 Meeting-to-Action) — ≥15 kontak di 3 zona WIB/WITA/WIT, 2 nama ganda (Budi), 3+ eksternal",
+  "contacts": [
+    { "id": "c001", "name": "Budi Santoso", "role": "Manager", "timezone": "WIB", "location": "Jakarta", "email": "budi.santoso@company.id", "phone": "+62-812-1234-5678", "department": "Operations" },
+    { "id": "c002", "name": "Budi Hartono", "role": "Staff", "timezone": "WITA", "location": "Denpasar", "email": "budi.hartono@company.id", "phone": "+62-813-1234-5678", "department": "Finance" },
+    { "id": "c003", "name": "Sari Wijaya", "role": "Secretary", "timezone": "WIB", "location": "Jakarta", "email": "sari.wijaya@company.id", "phone": "+62-811-1234-5678", "department": "General Affairs" },
+    { "id": "c004", "name": "Pak Hendra", "role": "Director", "timezone": "WIT", "location": "Jayapura", "email": "hendra@company.id", "phone": "+62-814-1234-5678", "department": "Executive" },
+    { "id": "c005", "name": "Dewi Lestari", "role": "Senior Staff", "timezone": "WIB", "location": "Bandung", "email": "dewi.lestari@company.id", "phone": "+62-815-2345-6789", "department": "Operations" },
+    { "id": "c006", "name": "Agus Prasetyo", "role": "Team Lead", "timezone": "WITA", "location": "Makassar", "email": "agus.prasetyo@company.id", "phone": "+62-816-3456-7890", "department": "Operations" },
+    { "id": "c007", "name": "Rina Marlina", "role": "Staff", "timezone": "WIT", "location": "Ambon", "email": "rina.marlina@company.id", "phone": "+62-817-4567-8901", "department": "Finance" },
+    { "id": "c008", "name": "Joko Susilo", "role": "Manager", "timezone": "WIB", "location": "Surabaya", "email": "joko.susilo@company.id", "phone": "+62-818-5678-9012", "department": "Logistics" },
+    { "id": "c009", "name": "Maya Sari", "role": "Staff", "timezone": "WIB", "location": "Medan", "email": "maya.sari@company.id", "phone": "+62-819-6789-0123", "department": "Logistics" },
+    { "id": "c010", "name": "Eko Wijaya", "role": "Senior Staff", "timezone": "WITA", "location": "Balikpapan", "email": "eko.wijaya@company.id", "phone": "+62-820-7890-1234", "department": "Operations" },
+    { "id": "c011", "name": "Nur Hidayah", "role": "Team Lead", "timezone": "WIT", "location": "Jayapura", "email": "nur.hidayah@company.id", "phone": "+62-821-8901-2345", "department": "Finance" },
+    { "id": "c012", "name": "Anton Gunawan", "role": "Manager", "timezone": "WIB", "location": "Semarang", "email": "anton.gunawan@company.id", "phone": "+62-822-9012-3456", "department": "Logistics" }
+  ],
+  "externalContacts": [
+    { "id": "e001", "name": "Vendor PT Maju", "email": "contact@ptmaju.co.id", "phone": "+62-810-1111-1111", "isExternal": true, "timezone": "WIB", "location": "Jakarta" },
+    { "id": "e002", "name": "Supplier CV Jaya", "email": "info@cvjaya.id", "phone": "+62-810-2222-2222", "isExternal": true, "timezone": "WIB", "location": "Bandung" },
+    { "id": "e003", "name": "Konsultan Andi", "email": "andi@konsultan.co.id", "phone": "+62-810-3333-3333", "isExternal": true, "timezone": "WITA", "location": "Makassar" }
+  ]
+}
